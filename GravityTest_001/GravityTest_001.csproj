@@ -90,7 +90,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CharDash.cs" />
     <Compile Include="Assets\Scripts\CharGravity.cs" />
+    <Compile Include="Assets\Scripts\OrbitForce.cs" />
     <Compile Include="Assets\Scripts\PlanetGravity.cs" />
     <Compile Include="Assets\Scripts\PlayerControls.cs" />
   </ItemGroup>

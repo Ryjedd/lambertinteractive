@@ -21,7 +21,7 @@ public class PlayerControls : MonoBehaviour {
 
         if (Input.GetButton("Jump"))
             if(moveDir.y < .5)
-                moveDir = new Vector3(moveDir.x, 5, moveDir.z);
+                moveDir = new Vector3(moveDir.x * GetComponent<CharDash>().dashAmount, 5, moveDir.z * GetComponent<CharDash>().dashAmount);
     }
 
     private void FixedUpdate()
