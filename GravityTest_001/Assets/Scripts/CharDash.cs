@@ -15,10 +15,10 @@ public class CharDash : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetButton("Dash") && dashTimer <= 0.0f)
+        if (Input.GetButton("Dash") && dashTimer <= 0.0f && isDown == false)
         {
-            dashTimer = 1.0f;
-            dashAmount = 10.0f;
+            dashTimer = 0.15f;
+            dashAmount = 25.0f;
             isDown = true;
         }else if (Input.GetButton("Dash"))
         {
@@ -31,7 +31,8 @@ public class CharDash : MonoBehaviour {
 
         if (dashTimer > 0.0f)
         {
-            GetComponent<Rigidbody>().AddForce(transform.forward * dashAmount);
+           
+           
         }
         else
         {
