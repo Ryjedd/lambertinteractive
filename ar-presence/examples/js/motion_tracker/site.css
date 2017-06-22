@@ -1,0 +1,61 @@
+body {
+	margin: 20px;
+	font: 1.5em/1.2 sans-serif;
+	text-align: center;
+
+}
+
+figure {
+	display: inline-block;
+	margin: 10px;
+	vertical-align: top;
+}
+
+figcaption {
+	text-align: left;
+	font-weight: bold;
+}
+
+video, canvas {
+	position:fixed;
+	top: -200px; right: 0; bottom: 0; left: -400px;
+	width: 480px;
+	height: 440px;
+	margin: auto;
+	background-color: #999;
+}
+
+canvas {
+	image-rendering: pixelated;
+}
+
+.portrait canvas {
+	transform-origin: 0 0;
+	transform: rotate(-90deg) translateX(-100%);
+}
+.desktop canvas {
+ 	transform: scale(-1, 1);
+	position:fixed;
+	top: -200px; right: 0; bottom: 0; left: 0px;
+}
+
+.secret-message{
+	display:none;
+	background-color: #522;
+	opacity:.5;
+	position:absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-size:100%;
+	margin: auto;
+}
+.secret-message h1{
+		font-family: "FuturaPTWebHeavy", Arial;
+		font-size: 50px;
+		text-transform: uppercase;
+		line-height: 0.95;
+		text-align: center;
+		font-weight: normal;
+		color: #fff; 
+		position: relative;
+		top: 50%;
+}
