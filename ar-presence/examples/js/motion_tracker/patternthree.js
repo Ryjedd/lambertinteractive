@@ -50,6 +50,7 @@ window.ARThreeOnLoad = function() {
 			markerRoot.add(sphere);
 			arScene.scene.add(markerRoot);
 			
+			
 		});
 
 		arController.loadMarker('Data/patt.kanji', function(markerId) {

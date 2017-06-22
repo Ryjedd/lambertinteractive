@@ -315,7 +315,12 @@ function capture(payload) {
 				var obj;
 				if (ev.data.type === artoolkit.PATTERN_MARKER) {
 					obj = this.threePatternMarkers[ev.data.marker.idPatt];
-					
+					if(ev.data.marker.idPatt == 0 && secretVisible == true){
+						resetCounter = 0;
+						secretVisible = true;
+						resetAll();
+					}
+					console.log("right now");
 				} else if (ev.data.type === artoolkit.BARCODE_MARKER) {
 					obj = this.threeBarcodeMarkers[ev.data.marker.idMatrix];
 
