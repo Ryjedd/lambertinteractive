@@ -36,13 +36,13 @@ canvas {
 .desktop canvas {
  	transform: scale(-1, 1);
 	position:fixed;
-	top: -200px; right: 0; bottom: 0; left: 0px;
+	top: -200px; right: 0; bottom: -20px; left: 0px;
 }
 
 .secret-message{
 	display:none;
 	background-color: #522;
-	opacity:.5;
+	opacity:.9;
 	position:absolute;
 	top: 0; right: 0; bottom: 0; left: 0;
 	background-size:100%;
@@ -58,4 +58,14 @@ canvas {
 		color: #fff; 
 		position: relative;
 		top: 50%;
+}
+
+#player{
+	display:none;
+	background-color: #522;
+	opacity:.9;
+	position:absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-size:100%;
+	margin: auto;
 }

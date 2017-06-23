@@ -34,11 +34,14 @@ function resetAll(){
 }
 
 function secretMessage(){
-		//show secret message
-		//score.textContent = pay.score;
-		$('.secret-message').fadeIn(250);
-		secretVisible = true;
-		resetTimer = setTimeout(resetAll, 5000);
+			//show secret message
+			//score.textContent = pay.score;
+			if(isPlaying == false){
+			$('.secret-message').fadeIn(250);
+			secretVisible = true;
+			resetTimer = setTimeout(resetAll, 5000);
+			//$("#ytVid")[0].src += "&autoplay=1";
+		}
 }
 
 function capture(payload) {
@@ -48,6 +51,15 @@ function capture(payload) {
 		
 		console.log("Happening");
 		
+}
+
+function secretVideo(videoID){
+		//show secret message
+		//score.textContent = pay.score;
+		$('#player').fadeIn(250);
+		player.loadVideoById(videoID, 0, "default");
+		player.playVideo();
+		//$("#ytVid")[0].src += "&autoplay=1";
 }
 
 ;(function() {
@@ -315,10 +327,16 @@ function capture(payload) {
 				var obj;
 				if (ev.data.type === artoolkit.PATTERN_MARKER) {
 					obj = this.threePatternMarkers[ev.data.marker.idPatt];
-					if(ev.data.marker.idPatt == 0 && secretVisible == true){
+					if(secretVisible == true && isPlaying == false){
 						resetCounter = 0;
 						secretVisible = true;
+						isPlaying = true;
 						resetAll();
+						if(ev.data.marker.idPatt == 0){
+							secretVideo('ha-bh4N3JXQ');
+						}else if(ev.data.marker.idPatt == 1){
+							secretVideo('UoHh5dVUyH8');
+						}
 					}
 					console.log("right now");
 				} else if (ev.data.type === artoolkit.BARCODE_MARKER) {
