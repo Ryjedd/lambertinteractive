@@ -15,11 +15,45 @@ body {
 
 .wrapper{
 	width:100%;
-
+	
 	
 }
 
-.about{
+.nav{
+	background-color:#F9EE33;
+	z-index:10;
+	height:100%;
+	width:15em;
+	position:fixed;
+	right:-15em;
+	border-left:3px solid #F01A34;
+}
+
+.header{
+	width:100%;
+	height:5em;
+	background-color:#555555;
+	opacity:.5;
+	left:0;
+	top:0;
+	position:fixed;
+	z-index:1;
+	.nav-control{
+		width:5em;
+		height:5em;
+		background-color:#222222;
+		border-radius:2px;
+		right:0;
+		position:fixed;
+	}
+}
+
+.main{
+	position:fixed;
+	right:0;
+	width:100%;
+	
+	.about{
 	@extend .info-block;
 	background-color:#33C5EF;
 }
@@ -39,34 +73,6 @@ body {
 	background-color:#33C5EF;
 	border:none;
 }
-
-.nav{
-	background-color:#F9EE33;
-	z-index:1;
-	height:100%;
-	width:15em;
-	position:fixed;
-	right:-15em;
-	border-left:3px solid #F01A34;
-}
-
-.header{
-	width:100%;
-	height:5em;
-	background-color:#555555;
-	opacity:.5;
-	left:0;
-	top:0;
-	position:fixed;
-	z-index:2;
-	.nav-control{
-		width:5em;
-		height:5em;
-		background-color:#222222;
-		border-radius:2px;
-		float:right;
-		position:relative;
-	}
 }
 
 .projects{
