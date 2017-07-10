@@ -1,3 +1,16 @@
+$shadow-color:#000000;
+
+@font-face {
+    font-family: sansation;
+    src: url(../fonts/Sansation-Regular.ttf);
+}
+
+@font-face {
+    font-family: sansation-bold;
+    src: url(../fonts/Sansation-Bold.ttf);
+}
+
+
 html,
 body {
 	font-size:16px;
@@ -35,6 +48,9 @@ body {
 
 .wrapper{
 	width:100%;
+	background-image:url("../img/ryan.jpg");
+	background-width:100%;
+	
 	
 	
 }
@@ -62,7 +78,7 @@ body {
 		
 		
 		h4{
-			font-family:Arial;
+			font-family:sansation;
 			text-transform: uppercase;
 			text-decoration:none;
 		}
@@ -79,7 +95,7 @@ body {
 .header{
 	width:100%;
 	height:5em;
-	background-color:#555555;
+	background-color:#444444;
 	opacity:.9;
 	left:0;
 	top:0;
@@ -97,7 +113,7 @@ body {
 }
 
 .logo{
-		font-family:Arial;
+		font-family:sansation;
 		text-transform: uppercase;
 		text-decoration:none;
 		position:fixed;
@@ -115,26 +131,58 @@ body {
 	right:0;
 	width:100%;
 	top:5em;
+	color:#FFFFFF;
+	
 	h3{
-		font-family:Arial;
+		font-family:sansation;
 		text-transform: uppercase;
 		text-decoration:none;
 	}
 	p{
-		font-family:Arial;
+		font-family:sansation;
 		text-transform: none;
 		text-decoration:none;
 	}
 	
 	#about{
 		@extend .info-block;
-		background-color:#33C5EF;
+		color:#FFFFFF;
+		h1{
+			font-family:sansation-bold;
+			font-size:4em;
+			text-transform: uppercase;
+			opacity:.9;
+			
+			-webkit-text-stroke-width: 2px;
+			-webkit-text-stroke-color: #995555;
+			text-shadow:
+				3px 3px 0 $shadow-color,
+				-1px -1px 0 $shadow-color,  
+				1px -1px 0 $shadow-color,
+				-1px 1px 0 $shadow-color,
+				1px 1px 0 $shadow-color;
+		}
 		
+		h2{
+			font-family:sansation-bold;
+			font-size:3em;
+			text-transform: uppercase;
+			opacity:.9;
+			
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: #555555;
+			text-shadow:
+				3px 3px 0 $shadow-color,
+				-1px -1px 0 $shadow-color,  
+				1px -1px 0 $shadow-color,
+				-1px 1px 0 $shadow-color,
+				1px 1px 0 $shadow-color;
+		}
 	}
 	
 	#carleton{
 		@extend .info-block;
-		background-color:#33C5EF;
+		background-color:#555555;
 	}
 	#co-op{
 		@extend .info-block;
@@ -143,7 +191,7 @@ body {
 	
 	#contact{
 		@extend .info-block;
-		background-color:#33C5EF;
+		background-color:#555555;
 		border:none;
 	}
 	
