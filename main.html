@@ -6,40 +6,44 @@
 <meta name="description" content="HTML code for user interface for Ajax, PHP and MySQL demo."> 
 <link href="css/style.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.animate-colors-min.js"></script>
 
 </head>
 
 <body>
 	<div class="wrapper">
+		<div class="logo"><h3>Ryan Lambert - Interactive Multimedia Developer</h3></div>
 		<div class="header">
 			<div class="nav-control"></div>
 		</div>
 		<div class="nav">
 			<div class="nav-buttons">
-				<a href="#about"><div class="nav-button"><h4>Who Am I?</h4></div></a>
-				<div class="nav-button"><h4>Canadian Museum of History</h4></div>
-				<div class="nav-button"><h4>Carleton University</h4></div>
-				<div class="nav-button"><h4>The Old Co-op</h4></div>
-				<div class="nav-button"><h4>Contact Me</h4></div>
+				<div class="nav-button" href="#about"><h4>Who Am I?</h4></div>
+				<div class="nav-button" href="#history-museum"><h4>Canadian Museum of History</h4></div>
+				<div class="nav-button" href="#carleton"><h4>Carleton University</h4></div>
+				<div class="nav-button" href="#co-op"><h4>The Old Co-op</h4></div>
+				<div class="main-button" href="#contact"><h4>Contact Me</h4></div>
 			</div>
 		</div>
 		<div class="main">
-			<div class="about">
+			<div id="about">
+				<div class="left-button" ></div>
 				<h3>Who Am I?<h3>
 				<p>Centering horizontally is not an issue, but I'm having problems getting it centered vertically. Presumably I'm doing something wrong or misunderstanding the explanations I found here (or maybe both).
 
 So as I'm probably interpreting earlier solutions given the wrong way, could someone please explain what exactly I have to add to the code beneath to get the h1 to center vertically?</p>
+				<div class="right-button"></div>
 			</div>
-			<div class="history-museum">
+			<div id="history-museum">
 				<h3>Canadian Museum of History</h3>
 			</div>
-			<div class="carleton">
+			<div id="carleton">
 				<h3>Carleton University</h3>
 			</div>
-			<div class="co-op">
+			<div id="co-op">
 				<h3>The Old Co-op</h3>
 			</div>
-			<div class="contact">
+			<div id="contact">
 				<h3>Contact Me</h3>
 			</div>
 		</div>

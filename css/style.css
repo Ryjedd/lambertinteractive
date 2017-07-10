@@ -4,14 +4,26 @@ body {
   margin: 0;
   padding: 0; }
 
-.info-block, .main .about, .main .carleton, .main .co-op, .main .contact, .main .history-museum {
+.button, .left-button, .right-button {
+  height: 100%;
+  width: 50%;
+  background-color: #9999FF; }
+
+.left-button {
+  float: left; }
+
+.right-button {
+  float: right; }
+
+.info-block, .main #about, .main #carleton, .main #co-op, .main #contact, .main #history-museum {
   width: 100%;
-  min-height: 20em;
+  height: 100%;
+  min-height: 44em;
   border-bottom: 1px solid #F01A34;
-  display: block;
   position: relative;
   padding: 2% 2% 2% 2%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  bottom: 0; }
 
 .wrapper {
   width: 100%; }
@@ -25,7 +37,7 @@ body {
   right: -15em;
   top: 0;
   border-left: 1px solid #F01A34; }
-  .nav .nav-button {
+  .nav .nav-button, .nav .main-button {
     width: 100%;
     height: 5em;
     color: #EEEEEE;
@@ -34,16 +46,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
-    .nav .nav-button h4 {
+    .nav .nav-button h4, .nav .main-button h4 {
       font-family: Arial;
       text-transform: uppercase;
       text-decoration: none; }
+  .nav .main-button {
+    background-color: #995555; }
 
 .header {
   width: 100%;
   height: 5em;
   background-color: #555555;
-  opacity: .5;
+  opacity: .9;
   left: 0;
   top: 0;
   position: fixed;
@@ -52,9 +66,21 @@ body {
     width: 5em;
     height: 5em;
     background-color: #222222;
-    border-radius: 2px;
     right: 0;
     position: fixed; }
+
+.logo {
+  font-family: Arial;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: fixed;
+  z-index: 30;
+  left: 2em;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF; }
 
 .main {
   position: relative;
@@ -69,16 +95,16 @@ body {
     font-family: Arial;
     text-transform: none;
     text-decoration: none; }
-  .main .about {
+  .main #about {
     background-color: #33C5EF; }
-  .main .carleton {
+  .main #carleton {
     background-color: #33C5EF; }
-  .main .co-op {
+  .main #co-op {
     background-color: #333333; }
-  .main .contact {
+  .main #contact {
     background-color: #33C5EF;
     border: none; }
-  .main .history-museum {
+  .main #history-museum {
     background-color: #333333; }
 
 /*# sourceMappingURL=style.css.map */
