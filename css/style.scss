@@ -14,43 +14,121 @@ $shadow-color:#000000;
 html,
 body {
 	font-size:16px;
-	margin: 0;
-	padding: 0;
-}
-
-.button{
+	margin:0;
+	padding:0;
 	height:100%;
-	width:50%;
-	background-color:#9999FF;
+	cursor: default;
+	
 }
 
-.left-button{
-	@extend .button;
-	float:left;
-}
 
-.right-button{
-	@extend .button;
-	float:right;
-}
+
+
 
 .info-block{
 		width:100%;
-		height:100%;
-		min-height:44em;
-		border-bottom:1px solid #F01A34;
-		position:relative;
+		height:43.5em;
+		border-bottom:1px solid #990000;
 		padding:2% 2% 2% 2%;
-		box-sizing:border-box;
-		bottom:0;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		background-color:#995555;
+		
+		.mini-header{
+			position:relative;
+			left:2%;
+			top:.5%;
+		}
+		
+		h2{
+				font-family:sansation-bold;
+				text-transform: uppercase;
+				
+				
+		}
+		
+		p{
+			position:relative;
+			top:-2%;
+		}
+		
+		.section-block{
+			width:100%;
+			height:100%;
+			position:relative;
+			padding:0% 0% 0% 0%;
+			-webkit-flex: auto;
+			flex: auto;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+			
+		
+			.button{
+				height:85%;
+				width:5%;
+				background-color:#333333;
+				position:absolute;
+				-webkit-flex: auto;
+				flex: auto;
+				bottom:0;
+				border:1px solid #666666;
+				border-top:1px solid #111111;
+				border-bottom:none;
+			}
+
+			.left-button{
+				@extend .button;
+				left:0;
+			}
+
+			.right-button{
+				@extend .button;
+				right:0;
+			}
+			.section-content{
+				width:90%;
+				height:85%;
+				position:absolute;
+				bottom:0;
+				background-color:#555555;
+				left:5%;
+				border:.25px solid #666666;
+				border-top:1px solid #111111;
+				border-opacity:.5;
+				border-bottom:none;
+				.section-meat{
+					top:-2.8%;
+					width:100%;
+					height:100%;
+					background-color:#FFFF99;
+					position:relative;
+					background-color:#666666;
+					
+					p{
+						top:2%;
+						left:2%;
+						position:relative;
+					}
+				}
+			}
+		}
 		
 }
 
 .wrapper{
 	width:100%;
+	position:relative;
+	height:auto;
 	background-image:url("../img/ryan.jpg");
-	background-width:100%;
+	background-size:125% auto;
+	background-color:#333333;
+	background-repeat:no-repeat;
 	
+	overflow: hidden;
 	
 	
 }
@@ -63,7 +141,7 @@ body {
 	position:fixed;
 	right:-15em;
 	top:0;
-	border-left:1px solid #F01A34;
+	border-left:1px solid #990000;
 	
 	
 	.nav-button{
@@ -129,9 +207,10 @@ body {
 .main{
 	position:relative;
 	right:0;
-	width:100%;
 	top:5em;
 	color:#FFFFFF;
+	
+	
 	
 	h3{
 		font-family:sansation;
@@ -144,23 +223,25 @@ body {
 		text-decoration:none;
 	}
 	
-	#about{
+	#home{
 		@extend .info-block;
+		display:none;
 		color:#FFFFFF;
+		background:none;
+		
 		h1{
 			font-family:sansation-bold;
 			font-size:4em;
 			text-transform: uppercase;
 			opacity:.9;
 			
-			-webkit-text-stroke-width: 2px;
-			-webkit-text-stroke-color: #995555;
+			
 			text-shadow:
-				3px 3px 0 $shadow-color,
-				-1px -1px 0 $shadow-color,  
-				1px -1px 0 $shadow-color,
-				-1px 1px 0 $shadow-color,
-				1px 1px 0 $shadow-color;
+				2px 2px 0 #990000,
+				-1px -1px 0 #990000,  
+				1px -1px 0 #990000,
+				-1px 1px 0 #990000,
+				1px 1px 0 #990000;
 		}
 		
 		h2{
@@ -168,9 +249,9 @@ body {
 			font-size:3em;
 			text-transform: uppercase;
 			opacity:.9;
+			position:relative;
+			left:2%;
 			
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: #555555;
 			text-shadow:
 				3px 3px 0 $shadow-color,
 				-1px -1px 0 $shadow-color,  
@@ -180,24 +261,52 @@ body {
 		}
 	}
 	
-	#carleton{
+	#about{
 		@extend .info-block;
 		background-color:#555555;
+		
+		
+		
+	}
+	#carleton{
+		@extend .info-block;
+		padding:0;
+		.section-content{
+			background-image:url("../img/carleton.png");
+			background-size:100%;
+		}
 	}
 	#co-op{
 		@extend .info-block;
-		background-color:#333333;
+		padding:0;
+		
+		.section-content{
+			background-image:url("../img/co-op.png");
+			background-size:100%;
+		}
 	}
 	
 	#contact{
 		@extend .info-block;
-		background-color:#555555;
 		border:none;
+		background-color:#555555;
 	}
 	
 	#history-museum{
 		@extend .info-block;
-		background-color:#333333;
+		padding:0;
+		
+		.mini-header{
+			top:.5%;
+			margin:0;
+			padding:0;
+		}
+		
+		.section-content{
+			background-image:url("../img/museum.png");
+			background-size:100%;
+		}
+		
 	}
 	
 }
