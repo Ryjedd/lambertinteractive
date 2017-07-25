@@ -1,9 +1,18 @@
 @font-face {
-  font-family: sansation;
-  src: url(../fonts/Sansation-Regular.ttf); }
+  font-family: 'sansation-bold';
+  src: url("../fonts/sansation-bold-webfont.woff2") format("woff2"), url("../fonts/sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 @font-face {
-  font-family: sansation-bold;
-  src: url(../fonts/Sansation-Bold.ttf); }
+  font-family: 'sansation-italic';
+  src: url("../fonts/sansation-italic-webfont.woff2") format("woff2"), url("../fonts/sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sansation';
+  src: url("../fonts/sansation-regular-webfont.woff2") format("woff2"), url("../fonts/sansation-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 html,
 body {
   font-size: 16px;
@@ -12,11 +21,33 @@ body {
   height: 100%;
   cursor: default; }
 
+.logo {
+  cursor: pointer; }
+
+.arrow, .left-arrow, .right-arrow {
+  width: 25px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  opacity: .7; }
+
+.left-arrow {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 5%; }
+
+.right-arrow {
+  top: 0;
+  left: 5%;
+  bottom: 0;
+  right: 0; }
+
 .info-block, .main #home, .main #about, .main #carleton, .main #co-op, .main #contact, .main #history-museum {
   width: 100%;
-  height: 43.5em;
-  border-bottom: 1px solid #990000;
-  padding: 2% 2% 2% 2%;
+  height: 43em;
+  border-bottom: 1px solid #FF5555;
+  padding: 0% 2% 2% 2%;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -46,14 +77,12 @@ body {
     .info-block .section-block .button, .main #home .section-block .button, .main #about .section-block .button, .main #carleton .section-block .button, .main #co-op .section-block .button, .main #contact .section-block .button, .main #history-museum .section-block .button, .info-block .section-block .left-button, .main #home .info-block .section-block .left-button, .info-block .main #home .section-block .left-button, .main #about .info-block .section-block .left-button, .info-block .main #about .section-block .left-button, .main #carleton .info-block .section-block .left-button, .info-block .main #carleton .section-block .left-button, .main #co-op .info-block .section-block .left-button, .info-block .main #co-op .section-block .left-button, .main #contact .info-block .section-block .left-button, .info-block .main #contact .section-block .left-button, .main #history-museum .info-block .section-block .left-button, .info-block .main #history-museum .section-block .left-button, .info-block .main #home .section-block .left-button, .main #home .info-block .section-block .left-button, .main #home .section-block .left-button, .main #about #home .section-block .left-button, .main #home #about .section-block .left-button, .main #carleton #home .section-block .left-button, .main #home #carleton .section-block .left-button, .main #co-op #home .section-block .left-button, .main #home #co-op .section-block .left-button, .main #contact #home .section-block .left-button, .main #home #contact .section-block .left-button, .main #history-museum #home .section-block .left-button, .main #home #history-museum .section-block .left-button, .info-block .main #about .section-block .left-button, .main #about .info-block .section-block .left-button, .main #home #about .section-block .left-button, .main #about #home .section-block .left-button, .main #about .section-block .left-button, .main #carleton #about .section-block .left-button, .main #about #carleton .section-block .left-button, .main #co-op #about .section-block .left-button, .main #about #co-op .section-block .left-button, .main #contact #about .section-block .left-button, .main #about #contact .section-block .left-button, .main #history-museum #about .section-block .left-button, .main #about #history-museum .section-block .left-button, .info-block .main #carleton .section-block .left-button, .main #carleton .info-block .section-block .left-button, .main #home #carleton .section-block .left-button, .main #carleton #home .section-block .left-button, .main #about #carleton .section-block .left-button, .main #carleton #about .section-block .left-button, .main #carleton .section-block .left-button, .main #co-op #carleton .section-block .left-button, .main #carleton #co-op .section-block .left-button, .main #contact #carleton .section-block .left-button, .main #carleton #contact .section-block .left-button, .main #history-museum #carleton .section-block .left-button, .main #carleton #history-museum .section-block .left-button, .info-block .main #co-op .section-block .left-button, .main #co-op .info-block .section-block .left-button, .main #home #co-op .section-block .left-button, .main #co-op #home .section-block .left-button, .main #about #co-op .section-block .left-button, .main #co-op #about .section-block .left-button, .main #carleton #co-op .section-block .left-button, .main #co-op #carleton .section-block .left-button, .main #co-op .section-block .left-button, .main #contact #co-op .section-block .left-button, .main #co-op #contact .section-block .left-button, .main #history-museum #co-op .section-block .left-button, .main #co-op #history-museum .section-block .left-button, .info-block .main #contact .section-block .left-button, .main #contact .info-block .section-block .left-button, .main #home #contact .section-block .left-button, .main #contact #home .section-block .left-button, .main #about #contact .section-block .left-button, .main #contact #about .section-block .left-button, .main #carleton #contact .section-block .left-button, .main #contact #carleton .section-block .left-button, .main #co-op #contact .section-block .left-button, .main #contact #co-op .section-block .left-button, .main #contact .section-block .left-button, .main #history-museum #contact .section-block .left-button, .main #contact #history-museum .section-block .left-button, .info-block .main #history-museum .section-block .left-button, .main #history-museum .info-block .section-block .left-button, .main #home #history-museum .section-block .left-button, .main #history-museum #home .section-block .left-button, .main #about #history-museum .section-block .left-button, .main #history-museum #about .section-block .left-button, .main #carleton #history-museum .section-block .left-button, .main #history-museum #carleton .section-block .left-button, .main #co-op #history-museum .section-block .left-button, .main #history-museum #co-op .section-block .left-button, .main #contact #history-museum .section-block .left-button, .main #history-museum #contact .section-block .left-button, .main #history-museum .section-block .left-button, .info-block .section-block .right-button, .main #home .info-block .section-block .right-button, .info-block .main #home .section-block .right-button, .main #about .info-block .section-block .right-button, .info-block .main #about .section-block .right-button, .main #carleton .info-block .section-block .right-button, .info-block .main #carleton .section-block .right-button, .main #co-op .info-block .section-block .right-button, .info-block .main #co-op .section-block .right-button, .main #contact .info-block .section-block .right-button, .info-block .main #contact .section-block .right-button, .main #history-museum .info-block .section-block .right-button, .info-block .main #history-museum .section-block .right-button, .info-block .main #home .section-block .right-button, .main #home .info-block .section-block .right-button, .main #home .section-block .right-button, .main #about #home .section-block .right-button, .main #home #about .section-block .right-button, .main #carleton #home .section-block .right-button, .main #home #carleton .section-block .right-button, .main #co-op #home .section-block .right-button, .main #home #co-op .section-block .right-button, .main #contact #home .section-block .right-button, .main #home #contact .section-block .right-button, .main #history-museum #home .section-block .right-button, .main #home #history-museum .section-block .right-button, .info-block .main #about .section-block .right-button, .main #about .info-block .section-block .right-button, .main #home #about .section-block .right-button, .main #about #home .section-block .right-button, .main #about .section-block .right-button, .main #carleton #about .section-block .right-button, .main #about #carleton .section-block .right-button, .main #co-op #about .section-block .right-button, .main #about #co-op .section-block .right-button, .main #contact #about .section-block .right-button, .main #about #contact .section-block .right-button, .main #history-museum #about .section-block .right-button, .main #about #history-museum .section-block .right-button, .info-block .main #carleton .section-block .right-button, .main #carleton .info-block .section-block .right-button, .main #home #carleton .section-block .right-button, .main #carleton #home .section-block .right-button, .main #about #carleton .section-block .right-button, .main #carleton #about .section-block .right-button, .main #carleton .section-block .right-button, .main #co-op #carleton .section-block .right-button, .main #carleton #co-op .section-block .right-button, .main #contact #carleton .section-block .right-button, .main #carleton #contact .section-block .right-button, .main #history-museum #carleton .section-block .right-button, .main #carleton #history-museum .section-block .right-button, .info-block .main #co-op .section-block .right-button, .main #co-op .info-block .section-block .right-button, .main #home #co-op .section-block .right-button, .main #co-op #home .section-block .right-button, .main #about #co-op .section-block .right-button, .main #co-op #about .section-block .right-button, .main #carleton #co-op .section-block .right-button, .main #co-op #carleton .section-block .right-button, .main #co-op .section-block .right-button, .main #contact #co-op .section-block .right-button, .main #co-op #contact .section-block .right-button, .main #history-museum #co-op .section-block .right-button, .main #co-op #history-museum .section-block .right-button, .info-block .main #contact .section-block .right-button, .main #contact .info-block .section-block .right-button, .main #home #contact .section-block .right-button, .main #contact #home .section-block .right-button, .main #about #contact .section-block .right-button, .main #contact #about .section-block .right-button, .main #carleton #contact .section-block .right-button, .main #contact #carleton .section-block .right-button, .main #co-op #contact .section-block .right-button, .main #contact #co-op .section-block .right-button, .main #contact .section-block .right-button, .main #history-museum #contact .section-block .right-button, .main #contact #history-museum .section-block .right-button, .info-block .main #history-museum .section-block .right-button, .main #history-museum .info-block .section-block .right-button, .main #home #history-museum .section-block .right-button, .main #history-museum #home .section-block .right-button, .main #about #history-museum .section-block .right-button, .main #history-museum #about .section-block .right-button, .main #carleton #history-museum .section-block .right-button, .main #history-museum #carleton .section-block .right-button, .main #co-op #history-museum .section-block .right-button, .main #history-museum #co-op .section-block .right-button, .main #contact #history-museum .section-block .right-button, .main #history-museum #contact .section-block .right-button, .main #history-museum .section-block .right-button {
       height: 85%;
       width: 5%;
-      background-color: #333333;
+      background-color: #111111;
       position: absolute;
       -webkit-flex: auto;
       flex: auto;
       bottom: 0;
-      border: 1px solid #666666;
-      border-top: 1px solid #111111;
-      border-bottom: none; }
+      opacity: .7; }
     .info-block .section-block .left-button, .main #home .section-block .left-button, .main #about .section-block .left-button, .main #carleton .section-block .left-button, .main #co-op .section-block .left-button, .main #contact .section-block .left-button, .main #history-museum .section-block .left-button {
       left: 0; }
     .info-block .section-block .right-button, .main #home .section-block .right-button, .main #about .section-block .right-button, .main #carleton .section-block .right-button, .main #co-op .section-block .right-button, .main #contact .section-block .right-button, .main #history-museum .section-block .right-button {
@@ -63,19 +92,27 @@ body {
       height: 85%;
       position: absolute;
       bottom: 0;
-      background-color: #555555;
       left: 5%;
       border: .25px solid #666666;
-      border-top: 1px solid #111111;
+      border-top: none;
       border-opacity: .5;
       border-bottom: none; }
       .info-block .section-block .section-content .section-meat, .main #home .section-block .section-content .section-meat, .main #about .section-block .section-content .section-meat, .main #carleton .section-block .section-content .section-meat, .main #co-op .section-block .section-content .section-meat, .main #contact .section-block .section-content .section-meat, .main #history-museum .section-block .section-content .section-meat {
         top: -2.8%;
         width: 100%;
         height: 100%;
-        background-color: #FFFF99;
         position: relative;
-        background-color: #666666; }
+        background-image: url("../img/black.png"); }
+        .info-block .section-block .section-content .section-meat img, .main #home .section-block .section-content .section-meat img, .main #about .section-block .section-content .section-meat img, .main #carleton .section-block .section-content .section-meat img, .main #co-op .section-block .section-content .section-meat img, .main #contact .section-block .section-content .section-meat img, .main #history-museum .section-block .section-content .section-meat img {
+          border: 2px solid #FFFFFF;
+          opacity: .9; }
+        .info-block .section-block .section-content .section-meat .inner-container, .main #home .section-block .section-content .section-meat .inner-container, .main #about .section-block .section-content .section-meat .inner-container, .main #carleton .section-block .section-content .section-meat .inner-container, .main #co-op .section-block .section-content .section-meat .inner-container, .main #contact .section-block .section-content .section-meat .inner-container, .main #history-museum .section-block .section-content .section-meat .inner-container {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          padding: 2%;
+          padding-top: 0;
+          box-sizing: border-box; }
         .info-block .section-block .section-content .section-meat p, .main #home .section-block .section-content .section-meat p, .main #about .section-block .section-content .section-meat p, .main #carleton .section-block .section-content .section-meat p, .main #co-op .section-block .section-content .section-meat p, .main #contact .section-block .section-content .section-meat p, .main #history-museum .section-block .section-content .section-meat p {
           top: 2%;
           left: 2%;
@@ -86,6 +123,8 @@ body {
   position: relative;
   height: auto;
   background-image: url("../img/ryan.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: 125% auto;
   background-color: #333333;
   background-repeat: no-repeat;
@@ -99,7 +138,7 @@ body {
   position: fixed;
   right: -15em;
   top: 0;
-  border-left: 1px solid #990000; }
+  border-left: 1px solid #FF5555; }
   .nav .nav-button, .nav .main-button {
     width: 100%;
     height: 5em;
@@ -148,7 +187,7 @@ body {
 .main {
   position: relative;
   right: 0;
-  top: 5em;
+  top: 10em;
   color: #FFFFFF; }
   .main h3 {
     font-family: sansation;
@@ -161,44 +200,114 @@ body {
   .main #home {
     display: none;
     color: #FFFFFF;
-    background: none; }
+    background: none;
+    position: relative;
+    height: 46em; }
+    .main #home .home-text {
+      position: relative;
+      top: 20%; }
     .main #home h1 {
-      font-family: sansation-bold;
-      font-size: 4em;
+      font-family: sansation-italic;
+      font-size: 3em;
       text-transform: uppercase;
       opacity: .9;
-      text-shadow: 2px 2px 0 #990000, -1px -1px 0 #990000,   1px -1px 0 #990000, -1px 1px 0 #990000, 1px 1px 0 #990000; }
+      text-shadow: 2px 2px 0 #FF5555, -1px -1px 0 #FF5555,   1px -1px 0 #FF5555, -1px 1px 0 #FF5555, 1px 1px 0 #FF5555; }
     .main #home h2 {
-      font-family: sansation-bold;
-      font-size: 3em;
+      font-family: sansation-italic;
+      font-size: 2em;
       text-transform: uppercase;
       opacity: .9;
       position: relative;
       left: 2%;
-      text-shadow: 3px 3px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; }
+      text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000; }
   .main #about {
-    background-color: #555555; }
+    background-image: url("../img/ryan2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    width: 100%;
+    height: 100%; }
+    .main #about .about-container {
+      height: 44em;
+      width: 100%;
+      padding-top: 1%; }
+      .main #about .about-container .about-header {
+        width: 90%;
+        position: relative;
+        top: 0;
+        color: #FF9999; }
+      .main #about .about-container .about-content {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        top: 3%;
+        left: 0%; }
   .main #carleton {
     padding: 0; }
-    .main #carleton .section-content {
+    .main #carleton .mini-header {
+      top: .5%;
+      margin: 0;
+      padding: 0; }
+    .main #carleton .section-block {
       background-image: url("../img/carleton.png");
-      background-size: 100%; }
+      background-repeat: no-repeat;
+      background-attachment: fixed; }
+      .main #carleton .section-block .section-content {
+        background-color: rgba(85, 85, 85, 0.1);
+        background-size: 100%; }
+        .main #carleton .section-block .section-content .section-meat {
+          top: 0; }
   .main #co-op {
     padding: 0; }
-    .main #co-op .section-content {
+    .main #co-op .mini-header {
+      top: .5%;
+      margin: 0;
+      padding: 0; }
+    .main #co-op .section-block {
       background-image: url("../img/co-op.png");
-      background-size: 100%; }
+      background-repeat: no-repeat;
+      background-attachment: fixed; }
+      .main #co-op .section-block .section-content {
+        background-color: rgba(85, 85, 85, 0.1);
+        background-size: 100%; }
+        .main #co-op .section-block .section-content .section-meat {
+          top: 0; }
   .main #contact {
     border: none;
-    background-color: #555555; }
+    background-image: url("../img/contact.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 53em; }
+    .main #contact h3 {
+      width: 100%;
+      display: block;
+      margin-top: 5%;
+      color: #FF9999; }
+    .main #contact p {
+      width: 50%;
+      display: block; }
+      .main #contact p a {
+        line-height: 30px;
+        vertical-align: center;
+        color: #FFFFFF; }
+        .main #contact p a img {
+          height: 100%;
+          display: inline-block;
+          vertical-align: middle; }
   .main #history-museum {
     padding: 0; }
     .main #history-museum .mini-header {
       top: .5%;
       margin: 0;
       padding: 0; }
-    .main #history-museum .section-content {
+    .main #history-museum .section-block {
       background-image: url("../img/museum.png");
-      background-size: 100%; }
+      background-repeat: no-repeat;
+      background-attachment: fixed; }
+      .main #history-museum .section-block .section-content {
+        background-color: rgba(85, 85, 85, 0.1);
+        background-size: 100%; }
+        .main #history-museum .section-block .section-content .section-meat {
+          top: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'sansation-bold';
+    src: url('../fonts/sansation-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansation-italic';
+    src: url('../fonts/sansation-italic-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansation';
+    src: url('../fonts/sansation-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body{
+	width:100%;
+	height:100%;
+}
+
+
+
+
+
+.left-content{
+	padding-top:0;
+	width:40%;
+	height:100%;
+	display:inline-block;
+	position:relative;
+	left:1%;
+	right:1%;
+	
+	a{
+		color:#FFF;
+	}
+
+	p{
+		padding:0;
+	
+	}
+
+	h4{
+		font-family:sansation-bold;
+		text-transform: uppercase;
+		padding-top:5%;
+		color:#FF5555;
+	}
+	
+	
+
+	.all-content{
+		padding:2%;
+		top:2%;
+		width:90%;
+		height:98%;
+		position:absolute;
+	
+		.bottom-content{
+			bottom:0;
+		}
+		
+		
+	}
+	
+}
+
+.right-content{
+	width:50%;
+	height:100%;
+	display:inline-block;
+	position:absolute;
+	right:6%;
+	
+	a{
+		color:#FFF;
+	}
+
+	p{
+		padding:0;
+	
+	}
+
+	h4{
+		font-family:sansation-bold;
+		text-transform: uppercase;
+		padding-top:5%;
+		color:#FF5555;
+	}
+
+	padding-top:0;
+	padding-left:4%;
+	.top-content{
+		padding-top:0;
+	}
+
+}
+
+.top-content{
+	width:90%;
+	height:50%;
+	position:absolute;
+	top:0;
+
+}
+
+.bottom-content{
+	width:90%;
+	height:50%;
+	position:absolute;
+	bottom:1%;
+
+}
+
+.intro-left-content{
+	@extend .left-content;
+	width:60%;
+	h5, p{
+		color:#FFF;
+		font-family:sansation-bold;
+	}
+	
+	h5{
+		margin-left:2%;
+	}
+}
+
+.intro-right-content{
+	@extend .right-content;
+	width:30%;
+}

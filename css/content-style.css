@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'sansation-bold';
+  src: url("../fonts/sansation-bold-webfont.woff2") format("woff2"), url("../fonts/sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sansation-italic';
+  src: url("../fonts/sansation-italic-webfont.woff2") format("woff2"), url("../fonts/sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'sansation';
+  src: url("../fonts/sansation-regular-webfont.woff2") format("woff2"), url("../fonts/sansation-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.left-content, .intro-left-content {
+  padding-top: 0;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  left: 1%;
+  right: 1%; }
+  .left-content a, .intro-left-content a {
+    color: #FFF; }
+  .left-content p, .intro-left-content p {
+    padding: 0; }
+  .left-content h4, .intro-left-content h4 {
+    font-family: sansation-bold;
+    text-transform: uppercase;
+    padding-top: 5%;
+    color: #FF5555; }
+  .left-content .all-content, .intro-left-content .all-content {
+    padding: 2%;
+    top: 2%;
+    width: 90%;
+    height: 98%;
+    position: absolute; }
+    .left-content .all-content .bottom-content, .intro-left-content .all-content .bottom-content {
+      bottom: 0; }
+
+.right-content, .intro-right-content {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  right: 6%;
+  padding-top: 0;
+  padding-left: 4%; }
+  .right-content a, .intro-right-content a {
+    color: #FFF; }
+  .right-content p, .intro-right-content p {
+    padding: 0; }
+  .right-content h4, .intro-right-content h4 {
+    font-family: sansation-bold;
+    text-transform: uppercase;
+    padding-top: 5%;
+    color: #FF5555; }
+  .right-content .top-content, .intro-right-content .top-content {
+    padding-top: 0; }
+
+.top-content {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  top: 0; }
+
+.bottom-content {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  bottom: 1%; }
+
+.intro-left-content {
+  width: 60%; }
+  .intro-left-content h5, .intro-left-content p {
+    color: #FFF;
+    font-family: sansation-bold; }
+  .intro-left-content h5 {
+    margin-left: 2%; }
+
+.intro-right-content {
+  width: 30%; }
+
+/*# sourceMappingURL=content-style.css.map */

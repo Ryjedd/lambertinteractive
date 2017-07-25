@@ -1,13 +1,36 @@
 $shadow-color:#000000;
 
 @font-face {
-    font-family: sansation;
-    src: url(../fonts/Sansation-Regular.ttf);
+    font-family: 'sansation-bold';
+    src: url('../fonts/sansation-bold-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
+
+
+
 @font-face {
-    font-family: sansation-bold;
-    src: url(../fonts/Sansation-Bold.ttf);
+    font-family: 'sansation-italic';
+    src: url('../fonts/sansation-italic-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansation';
+    src: url('../fonts/sansation-regular-webfont.woff2') format('woff2'),
+         url('../fonts/sansation-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 
@@ -22,14 +45,39 @@ body {
 }
 
 
+.logo{
+	cursor: pointer;
+	
+}
 
+.arrow{
+	width:25px;
+	height:100px;
+	margin: auto;
+	position: absolute;
+	opacity:.7;
+	
+	
+}
+
+.left-arrow{
+	@extend .arrow;
+	top: 0; left: 0; bottom: 0; right: 5%;
+	
+}
+
+.right-arrow{
+	@extend .arrow;
+	top: 0; left: 5%; bottom: 0; right: 0;
+
+}
 
 
 .info-block{
 		width:100%;
-		height:43.5em;
-		border-bottom:1px solid #990000;
-		padding:2% 2% 2% 2%;
+		height:43em;
+		border-bottom:1px solid #FF5555;
+		padding:0% 2% 2% 2%;
 		display: -webkit-flex;
 		display: flex;
 		-webkit-flex-direction: row;
@@ -54,6 +102,7 @@ body {
 			top:-2%;
 		}
 		
+		
 		.section-block{
 			width:100%;
 			height:100%;
@@ -70,14 +119,13 @@ body {
 			.button{
 				height:85%;
 				width:5%;
-				background-color:#333333;
+				background-color:#111111;
 				position:absolute;
 				-webkit-flex: auto;
 				flex: auto;
 				bottom:0;
-				border:1px solid #666666;
-				border-top:1px solid #111111;
-				border-bottom:none;
+				
+				opacity:.7;
 			}
 
 			.left-button{
@@ -89,30 +137,48 @@ body {
 				@extend .button;
 				right:0;
 			}
+			
 			.section-content{
 				width:90%;
 				height:85%;
 				position:absolute;
 				bottom:0;
-				background-color:#555555;
+				
 				left:5%;
 				border:.25px solid #666666;
-				border-top:1px solid #111111;
+				border-top:none;
 				border-opacity:.5;
 				border-bottom:none;
 				.section-meat{
 					top:-2.8%;
 					width:100%;
 					height:100%;
-					background-color:#FFFF99;
 					position:relative;
-					background-color:#666666;
+					background-image:url("../img/black.png");
+					
+					img{
+						border:2px solid #FFFFFF;
+						opacity:.9;
+					}
+					
+					.inner-container{
+						width:100%;
+						height:100%;
+						position:absolute;
+						padding:2%;
+						padding-top:0;
+						box-sizing: border-box;
+						
+					}
+					
 					
 					p{
 						top:2%;
 						left:2%;
 						position:relative;
 					}
+					
+					
 				}
 			}
 		}
@@ -124,6 +190,8 @@ body {
 	position:relative;
 	height:auto;
 	background-image:url("../img/ryan.jpg");
+	background-repeat: no-repeat;
+		background-attachment: fixed;
 	background-size:125% auto;
 	background-color:#333333;
 	background-repeat:no-repeat;
@@ -141,7 +209,7 @@ body {
 	position:fixed;
 	right:-15em;
 	top:0;
-	border-left:1px solid #990000;
+	border-left:1px solid #FF5555;
 	
 	
 	.nav-button{
@@ -207,7 +275,7 @@ body {
 .main{
 	position:relative;
 	right:0;
-	top:5em;
+	top:10em;
 	color:#FFFFFF;
 	
 	
@@ -228,32 +296,39 @@ body {
 		display:none;
 		color:#FFFFFF;
 		background:none;
+		position:relative;
+		height:46em;
+		
+		.home-text{
+			position:relative;
+			top:20%;
+		}
 		
 		h1{
-			font-family:sansation-bold;
-			font-size:4em;
+			font-family:sansation-italic;
+			font-size:3em;
 			text-transform: uppercase;
 			opacity:.9;
 			
 			
 			text-shadow:
-				2px 2px 0 #990000,
-				-1px -1px 0 #990000,  
-				1px -1px 0 #990000,
-				-1px 1px 0 #990000,
-				1px 1px 0 #990000;
+				2px 2px 0 #FF5555,
+				-1px -1px 0 #FF5555,  
+				1px -1px 0 #FF5555,
+				-1px 1px 0 #FF5555,
+				1px 1px 0 #FF5555;
 		}
 		
 		h2{
-			font-family:sansation-bold;
-			font-size:3em;
+			font-family:sansation-italic;
+			font-size:2em;
 			text-transform: uppercase;
 			opacity:.9;
 			position:relative;
 			left:2%;
 			
 			text-shadow:
-				3px 3px 0 $shadow-color,
+				2px 2px 0 $shadow-color,
 				-1px -1px 0 $shadow-color,  
 				1px -1px 0 $shadow-color,
 				-1px 1px 0 $shadow-color,
@@ -263,33 +338,116 @@ body {
 	
 	#about{
 		@extend .info-block;
-		background-color:#555555;
+		background-image:url("../img/ryan2.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position:left;
+		width:100%;
+		height:100%;
 		
+		.about-container{
+			height:44em;
+			width:100%;
+			padding-top:1%;
+			.about-header{
+				width:90%;
+				position:relative;
+				top:0;
+				color:#FF9999;
+			}
+		
+			.about-content{
+				width:50%;
+				height:50%;
+				position:relative;
+				top:3%;
+				left:0%;
+			}
+		}
 		
 		
 	}
 	#carleton{
 		@extend .info-block;
 		padding:0;
-		.section-content{
+		
+		.mini-header{
+			top:.5%;
+			margin:0;
+			padding:0;
+		}
+		
+		.section-block{
 			background-image:url("../img/carleton.png");
-			background-size:100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			.section-content{
+				background-color:rgba(85,85,85,.1);
+				background-size:100%;
+				.section-meat{
+					top:0;
+				}
+			
+			}
 		}
 	}
 	#co-op{
 		@extend .info-block;
 		padding:0;
 		
-		.section-content{
+		.mini-header{
+			top:.5%;
+			margin:0;
+			padding:0;
+		}
+		
+		.section-block{
 			background-image:url("../img/co-op.png");
-			background-size:100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			.section-content{
+				background-color:rgba(85,85,85,.1);
+				background-size:100%;
+				.section-meat{
+					top:0;
+				}
+			}
 		}
 	}
 	
 	#contact{
 		@extend .info-block;
 		border:none;
-		background-color:#555555;
+		background-image:url("../img/contact.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		height:53em;
+		
+		h3{
+			width:100%;
+			display:block;
+			margin-top:5%;
+			color:#FF9999;
+		}
+		
+		p{
+			width:50%;
+			display:block;
+			
+			a{
+				line-height:30px;
+				vertical-align:center;
+				color:#FFFFFF;
+				
+				img{
+					height:100%;
+					display:inline-block;
+					vertical-align:middle;
+				}
+			}
+		}
+		
+		
 	}
 	
 	#history-museum{
@@ -301,12 +459,19 @@ body {
 			margin:0;
 			padding:0;
 		}
-		
-		.section-content{
+		.section-block{
 			background-image:url("../img/museum.png");
-			background-size:100%;
-		}
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			.section-content{
+				background-color:rgba(85,85,85,.1);
+				background-size:100%;
+				.section-meat{
+					top:0;
+				}
+			}
 		
+		}
 	}
 	
 }
