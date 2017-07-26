@@ -144,13 +144,14 @@ $(document).ready(function(){
 			
 			//===================================
 			
-			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=100%'}, 500, "swing",function(){
+			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=150%'}, 500, "swing",function(){
 				//==============================
 				$('#'+cur+'-content').load("projects/"+cur+"/" + curCount + ".html");
+
 				//==============================
 			});
-			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).delay( 150 ).animate({left:'+=250%'}, 0);
-			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=150%'}, 500, "swing");
+			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'+=250%'}, 0);
+			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=100%'}, 500, "swing");
 		
 	});
 	
@@ -166,14 +167,18 @@ $(document).ready(function(){
 			
 			//===================================
 			
-			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'+=100%'}, 500, "swing", function(){
+			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'+=150%'}, 500, "swing", function(){
 				//==============================
 				$('#'+cur+'-content').load("projects/"+cur+"/" + curCount + ".html");
+				
 				//==============================
 			});
-			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=200%'}, 0);
+			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'-=250%'}, 0);
 			$(this).siblings('.section-content').eq(0).children('.section-meat').eq(0).animate({left:'+=100%'}, 500, "swing");
+			
 		
 	});
+	
+	
 	
 });

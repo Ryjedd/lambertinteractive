@@ -1,12 +1,16 @@
 <head>
 	<link href="css/content-style.css" rel="stylesheet">
+	<link href="css/youtube.css" rel="stylesheet">
 </head>
 <body>
 	<div class="left-content">
 		<div class="all-content">
 			<div class="top-content">
 				<h3>Multitouch Timeline Sample</h3>
-				<iframe width="420" height="237" src="https://www.youtube.com/embed/PUeJRm10_Ns" frameborder="1" allowfullscreen></iframe>
+				<div class="youtube" data-embed="PUeJRm10_Ns"> 
+					<!-- (2) the "play" button -->
+					<div class="play-button"></div> 
+				</div>
 			</div>
 			<div class="bottom-content">
 				<h4>Goal</h4>
@@ -27,4 +31,32 @@
 			<p>This was the first project I worked on where I was receiving significant feedback related to its direction. It allowed me the opportunity to listen to the requirements and develop a solution to meet them. It also required me to analyze the feedback and forced me to accept constructive criticism. As I presented each iteration, naturally sure that I had perfected it this time, I listened as certain choices of mine were countered with other ideas, and I either had to defend my choice or accept the alteration. In the end, this back-and-forth, iterative process resulted in a product that both my director and I were satisfied with and which was built upon for future projects.</p>
 		</div>
 	</div>
+	
+<script>
+var youtube = document.querySelectorAll( ".youtube" );
+
+for (var i = 0; i < youtube.length; i++) {
+	
+    // thumbnail image source.
+    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg"; 
+	
+	// Load the image asynchronously
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+        youtube[ i ].appendChild( image );
+    }( i ) );
+	
+	youtube[i].addEventListener( "click", function() {
+        var iframe = document.createElement( "iframe" );
+ 
+            iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+ 
+            this.innerHTML = "";
+            this.appendChild( iframe );
+    } );
+}
+</script>
 </body>

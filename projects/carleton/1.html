@@ -1,12 +1,16 @@
 <head>
 	<link href="css/content-style.css" rel="stylesheet">
+	<link href="css/youtube.css" rel="stylesheet">
 </head>
 <body>
 	<div class="left-content">
 		<div class="all-content">
 			<div class="top-content">
 				<h3>Project Marko</h3>
-				<iframe width="420" height="237"  src="https://www.youtube.com/embed/toZrOkcICpk" frameborder="1" allowfullscreen></iframe>
+				<div class="youtube" data-embed="toZrOkcICpk"> 
+					<!-- (2) the "play" button -->
+					<div class="play-button"></div> 
+				</div>
 			</div>
 			<div class="bottom-content">
 				<h4>Goal</h4>
@@ -27,4 +31,32 @@
 			<p>Project Marko was the largest project I have undertaken so far and came with a lot of ups and downs. It required significant research and even more problem solving. I delved deeper into many concepts and tools, including object-oriented programming, Unity, C#, Arduino, and Bluetooth. It also served as an important experience with experimental technology and dealing with problems that no one else has yet experienced. Furthermore, a great deal of this project revolved around designing for and testing with blind users, and it was a great feeling when hearing positive feedback in regards to our design choices. Most of all, it was a lesson in perseverence, as the countless hours of testing and sitting in hallways early into the morning before a demonstration wore down our spirit. This made it so much sweeter when everything finally came together 3 hours before our make-or-break status presentation.</p>
 		</div>
 	</div>
+	
+<script>
+var youtube = document.querySelectorAll( ".youtube" );
+
+for (var i = 0; i < youtube.length; i++) {
+	
+    // thumbnail image source.
+    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg"; 
+	
+	// Load the image asynchronously
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+        youtube[ i ].appendChild( image );
+    }( i ) );
+	
+	youtube[i].addEventListener( "click", function() {
+        var iframe = document.createElement( "iframe" );
+            iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+			
+            this.innerHTML = "";
+            this.appendChild( iframe );
+			
+    } );
+}
+</script>
 </body>

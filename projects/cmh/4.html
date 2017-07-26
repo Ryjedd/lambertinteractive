@@ -1,12 +1,16 @@
 <head>
 	<link href="css/content-style.css" rel="stylesheet">
+	<link href="css/youtube.css" rel="stylesheet">
 </head>
 <body>
 	<div class="left-content">
 		<div class="all-content">
 			<div class="top-content">
 				<h3>Multitouch Franklin Expedition Sample</h3>
-				<iframe width="420" height="237"  src="https://www.youtube.com/embed/epAV4YVKG1A" frameborder="1" allowfullscreen></iframe>
+				<div class="youtube" data-embed="epAV4YVKG1A"> 
+					<!-- (2) the "play" button -->
+					<div class="play-button"></div> 
+				</div>
 			</div>
 			<div class="bottom-content">
 				<h4>Goal</h4>
@@ -27,4 +31,32 @@
 			<p>This project allowed me to delve into user-centered design and user-testing, albeit not with actual museum visitors. I did, however, have a subject who made it their goal to break the interface, which allowed me to pick out any potential flaws and implement fixes. By the end, there were no perceivable places for error, convincing me that I had performed the appropriate quality assurance for optimal user experience. It was a great experience that helped convince me of the importance of testing and user-centered design.</p>
 		</div>
 	</div>
+	
+<script>
+var youtube = document.querySelectorAll( ".youtube" );
+
+for (var i = 0; i < youtube.length; i++) {
+	
+    // thumbnail image source.
+    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg"; 
+	
+	// Load the image asynchronously
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+        youtube[ i ].appendChild( image );
+    }( i ) );
+	
+	youtube[i].addEventListener( "click", function() {
+        var iframe = document.createElement( "iframe" );
+ 
+            iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+ 
+            this.innerHTML = "";
+            this.appendChild( iframe );
+    } );
+}
+</script>
 </body>

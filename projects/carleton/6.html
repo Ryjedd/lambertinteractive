@@ -1,12 +1,16 @@
 <head>
 	<link href="css/content-style.css" rel="stylesheet">
+	<link href="css/youtube.css" rel="stylesheet">
 </head>
 <body>
 	<div class="left-content">
 		<div class="all-content">
 			<div class="top-content">
 				<h3>Nikko</h3>
-				<iframe width="420" height="237"  src="https://www.youtube.com/embed/jAp72_4gHJg" frameborder="1" allowfullscreen></iframe>
+				<div class="youtube" data-embed="jAp72_4gHJg"> 
+					<!-- (2) the "play" button -->
+					<div class="play-button"></div> 
+				</div>
 			</div>
 			<div class="bottom-content">
 				<h4>Goal</h4>
@@ -27,4 +31,33 @@
 			<p>This was my first real programming experience since my last Kinect project in 2012 (which I unfortunately do not have footage of). It was a reintroduction to object-oriented programming and an introduction to Cinder, Leap Motion, and sensor-based interaction. This, along with my ArduinoCar, instilled in me a deep interest in sensors and IOT technology, which I aim to pursue further in the near future.</p>
 		</div>
 	</div>
+	
+	
+<script>
+var youtube = document.querySelectorAll( ".youtube" );
+
+for (var i = 0; i < youtube.length; i++) {
+	
+    // thumbnail image source.
+    var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg"; 
+	
+	// Load the image asynchronously
+    var image = new Image();
+    image.src = source;
+    image.addEventListener( "load", function() {
+        youtube[ i ].appendChild( image );
+    }( i ) );
+	
+	youtube[i].addEventListener( "click", function() {
+        var iframe = document.createElement( "iframe" );
+            iframe.setAttribute( "frameborder", "0" );
+            iframe.setAttribute( "allowfullscreen", "" );
+            iframe.setAttribute( "src", "https://www.youtube.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+			
+            this.innerHTML = "";
+            this.appendChild( iframe );
+			
+    } );
+}
+</script>
 </body>
